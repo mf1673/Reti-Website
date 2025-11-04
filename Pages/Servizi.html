@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Services</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
+</head>
+
+<body>
+  <nav class="hcenter">
+    <a href="/index.html">Home</a>
+    <a href="/Pages/Hardware.html">Hardware</a>
+    <a href="/Pages/Software.html">Software</a>
+    <a href="/Pages/Servizi.html">Servizi</a>
+  </nav>
+
+
+  <div style="margin: 80px 30px 100px 30px">
+    <h1 class="hcenter">Servizi </h1>
+
+    <div class="hcenter" style="padding-bottom: 30px;">
+      <img width="24%"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdecatec.de%2Fwp-content%2Fuploads%2F2025%2F03%2Fopencloud_logo_white.png&f=1&nofb=1&ipt=902142b4600fa6ce6d27c1940d173d33aee57f892ca322494773679aeca69b75">
+      <img width="20%" style="border-radius: 60px;"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpreview.redd.it%2Fnew-plex-logo-v0-5x93lknmuaw81.jpg%3Fwidth%3D640%26crop%3Dsmart%26auto%3Dwebp%26s%3Dd097e242da8496e0cbf4bd016134b759acfb491c&f=1&nofb=1&ipt=68e3092e6f581275626b68109c8d32be8527cb0c24cd5de31c46be5112e60dbd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <img width="23%" style="border-radius: 60px;"
+        src="https://play-lh.googleusercontent.com/ZpV8EMn8XZ_8V1GipeeZ4y-xeXJiQD5vlJkLTSJ7NN1ty9ZdHG6AVDA-71QsjsaL4A">
+      <img width="25%"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Frepository-images.githubusercontent.com%2F193215554%2Fdf34b36d-279c-496c-91c2-959dd9c9f13d&f=1&nofb=1&ipt=4b6947d1c0b1bea121842a26d0e3460be5adea506040955b79d5141f5c9e1ac9">
+    </div>
+
+
+    <p>
+      Dopo aver definito la struttura hardware e il software di base, è il momento di dare vita al tuo homelab
+      attraverso i servizi.
+      Sono questi che rendono l’infrastruttura realmente utile, automatizzata e personalizzata sulle tue esigenze
+      quotidiane.
+      Che si tratti di sicurezza, gestione della rete, archiviazione o intelligenza artificiale, ogni servizio può
+      essere distribuito strategicamente sui vari dispositivi per ottimizzare risorse e prestazioni.
+    </p>
+
+    <h2>Servizi di rete e sicurezza</h2>
+    <p>
+      Il primo servizio essenziale in un homelab moderno è la <strong>VPN</strong>.
+      <strong>WireGuard</strong> rappresenta la scelta più efficiente: è leggero, veloce e molto sicuro.
+      Può essere installato direttamente sul <strong>router</strong> — ad esempio su pfSense o OPNsense — per gestire
+      l’accesso remoto a tutta la rete, oppure sul <strong>Raspberry Pi</strong> se si preferisce mantenere il router
+      pulito e più stabile.
+      In entrambi i casi, permette di accedere ai propri servizi interni da qualunque luogo, come se si fosse connessi
+      da casa.
+    </p>
+
+    <p>
+      Altro servizio fondamentale è <strong>Pi-hole</strong>, il filtro DNS che blocca pubblicità, tracker e siti
+      indesiderati a livello di rete.
+      L’installazione più semplice è sul <strong>Raspberry Pi</strong>, ma per un controllo più integrato si può
+      configurare direttamente una <strong>DNS blacklist</strong> nel router, se il firmware lo supporta.
+      In questo modo, ogni dispositivo della rete — anche quelli che non possono installare ad-blocker — beneficia della
+      protezione automatica offerta dal filtro DNS centralizzato.
+    </p>
+
+    <h2>Servizi Home</h2>
+    <p>
+      Il cuore del tuo spazio digitale domestico può essere costituito da una serie di servizi dedicati
+      all’archiviazione, alla gestione dei file e alla fruizione dei contenuti multimediali.
+      <strong>Nextcloud</strong> o la sua variante <strong>OpenCloud</strong> permettono di creare un cloud personale,
+      con sincronizzazione di file, calendari e contatti, completamente sotto il tuo controllo.
+      In alternativa, per chi ama gestire la propria libreria di film e serie TV, <strong>Jellyfin</strong> e
+      <strong>Plex</strong> offrono potenti soluzioni di streaming domestico, accessibili anche da dispositivi mobili o
+      smart TV.
+      Per la gestione delle foto, invece, <strong>Immich</strong> è una piattaforma moderna e open-source che consente
+      di archiviare, riconoscere e visualizzare le proprie immagini in modo intelligente, un po’ come Google Photos ma
+      senza cloud esterni.
+    </p>
+
+    <p>
+      Questi servizi sono perfetti da installare sul <strong>server Home</strong> o su un <strong>NAS</strong> con buone
+      prestazioni di rete, poiché gestiscono grandi quantità di dati e spesso devono restare disponibili anche per più
+      utenti.
+    </p>
+
+    <h2>Servizi AI e Automazione</h2>
+    <p>
+      L’intelligenza artificiale e l’automazione stanno diventando parte integrante di molti homelab.
+      Tra le piattaforme più interessanti c’è <strong>Ollama</strong>, che consente di eseguire modelli linguistici in
+      locale, come LLaMA o Mistral, garantendo privacy e velocità d’accesso.
+      Per creare automazioni e flussi di lavoro intelligenti, <strong>n8n</strong> è una soluzione eccellente: permette
+      di collegare servizi, API e script personalizzati tramite una comoda interfaccia grafica.
+      È consigliabile installarlo sul <strong>Raspberry Pi</strong> o sul <strong>server core</strong>, poiché richiede
+      poche risorse e può operare 24/7.
+    </p>
+
+    <p>
+      Se invece si desidera gestire l’interfaccia e il controllo di modelli generativi, <strong>OpenWebUI</strong> offre
+      un front-end moderno per modelli testuali (come chat e generazione di risposte), mentre <strong>ComfyUI</strong> è
+      ideale per creare workflow di generazione di immagini con intelligenza artificiale.
+      Questi ultimi due servizi, più pesanti dal punto di vista grafico e computazionale, si trovano meglio su un
+      <strong>server AI</strong> dotato di GPU, ma possono essere eseguiti anche in modo limitato su macchine meno
+      potenti per test o prototipi.
+    </p>
+
+    <h2>Conclusione</h2>
+    <p>
+      La forza di un homelab sta nella varietà dei servizi che offre e nel modo in cui vengono distribuiti tra le
+      macchine.
+      Un’infrastruttura ben organizzata, con un router sicuro, un server core sempre attivo e un server home ricco di
+      funzioni, può coprire praticamente ogni esigenza digitale, dal semplice cloud personale all’automazione basata su
+      AI.
+      Con un po’ di configurazione e creatività, il tuo homelab diventa non solo una rete domestica avanzata, ma una
+      vera estensione della tua idea di efficienza e indipendenza tecnologica.
+    </p>
+
+  </div>
+
+
+
+  <footer class="hcenter">
+    <p style="padding: 10px;">Contatti</p>
+    <a style="text-decoration: none;" href="https://github.com/mf1673">
+      <img width="40px" href="" src="/Images/github.png">
+    </a>
+    <a style="text-decoration: none;" href="https://instagram.com/michele._.fazio">
+      <img width="40px" src="/Images/instagram.png">
+    </a>
+  </footer>
+</body>
+
+</html>

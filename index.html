@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
+  <nav class="hcenter">
+    <a href="/index.html">Home</a>
+    <a href="/Pages/Hardware.html">Hardware</a>
+    <a href="/Pages/Software.html">Software</a>
+    <a href="/Pages/Servizi.html">Servizi</a>
+  </nav>
+
+  <div id="content" style="padding: 80px 30px 100px 30px">
+    <h1 class="hcenter"> The Homelab Project</h1>
+    <div class="hcenter" style="padding-bottom: 30;">
+      <img width=50% height=50%
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsysblob.com%2Fimages%2Fhomelabbing.png&f=1&nofb=1&ipt=0b1449f7baa099875eb70b8d254c356d15181ab5c9ed78aa13ffaae621c8abf1"
+        style="border-radius: 10px;">
+    </div>
+    <h4>Introduzione</h4>
+    <p>
+      L’homelabbing è la pratica di creare un piccolo laboratorio informatico domestico, dove poter sperimentare,
+      imparare e gestire servizi personali in autonomia.<br>
+      Può variare da semplici configurazioni con un singolo Raspberry Pi fino a vere e proprie infrastrutture con più
+      server, reti virtuali e sistemi di automazione.<br>
+      L’obiettivo è avere pieno controllo dei propri dati e servizi, migliorando le proprie competenze tecniche e
+      riducendo la dipendenza da soluzioni cloud esterne.<br>
+    </p>
+    <h4>Configurazione</h4>
+    <p>
+      La mia configurazione è strutturata in modo modulare e sostenibile.
+      Alla base c’è pfSense come router principale, posizionato a monte della rete. In caso di fibra o ADSL, il modem
+      funge da ponte verso pfSense, che gestisce routing, firewall e la VPN WireGuard per l’accesso remoto sicuro.
+      Dietro al router si trovano lo switch e gli access point per distribuire la connessione in tutta la rete
+      domestica.
+      Poi arriva la parte “intelligente” dell’infrastruttura:
+      Server Core
+      È il cuore del sistema, ospitato su una macchina a basso consumo (come un Raspberry Pi, una Zimaboard o un vecchio
+      portatile).
+      Su questo server girano i servizi che devono essere sempre attivi:
+      Home Assistant per l’automazione domestica
+      un server web con script per accensione, spegnimento e gestione remota degli altri server
+      Server Home
+      È il “contenitore” principale dei dati, simile a un NAS.
+      Rimane spento la maggior parte del tempo e viene acceso solo quando serve accedere a grandi quantità di file o a
+      risorse più pesanti, riducendo così i consumi.
+      Server AI (opzionale)
+      Pensato per chi vuole sperimentare con intelligenza artificiale, machine learning o modelli locali.
+      Ovviamente richiede hardware più costoso e maggiore potenza di calcolo.
+      Server di Backup
+      Serve a garantire la sicurezza dei dati, mantenendo copie aggiornate in locale o su dispositivi separati.
+    </p>
+    <h4>Conclusioni</h4>
+    <p>
+      Costi principali:
+    <ul>
+      <li>Energia elettrica</li>
+      <li>Connessione Internet</li>
+      <li>Manutenzione hardware e software</li>
+    </ul>
+    <p>
+      Benefici:
+    </p>
+    <ul>
+      <li>Maggiore privacy e controllo sui propri dati</li>
+      <li>Nessun costo ricorrente per servizi cloud</li>
+      <li>Indipendenza e libertà di sperimentare</li>
+    </ul>
+    </p>
+  </div>
+
+
+  <footer class="hcenter">
+    <p style="padding: 10px;">Contatti</p>
+    <a style="text-decoration: none;" href="https://github.com/mf1673">
+      <img width="40px" href="" src="/Images/github.png">
+    </a>
+    <a style="text-decoration: none;" href="https://instagram.com/michele._.fazio">
+      <img width="40px" src="/Images/instagram.png">
+    </a>
+  </footer>
+</body>
+
+</html>

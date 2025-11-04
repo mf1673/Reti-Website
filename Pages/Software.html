@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Software</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
+</head>
+
+<body>
+  <nav class="hcenter">
+    <a href="/index.html">Home</a>
+    <a href="/Pages/Hardware.html">Hardware</a>
+    <a href="/Pages/Software.html">Software</a>
+    <a href="/Pages/Servizi.html">Servizi</a>
+  </nav>
+
+  <div style="margin: 80px 30px 100px 30px">
+    <h1 class="hcenter">Software</h1>
+    <div class="hcenter" style="padding-bottom: 30px;">
+      <img width="24%"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.234NPxpBqt0UeP9w6ZK83AAAAA%3Fpid%3DApi&f=1&ipt=f133cd2b710b8a03308e5291184b047a373c45f90899cb8cbe4273d3f1e2f34f">
+      <img width="20%"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexternal-preview.redd.it%2F5G2IZqt4O-8CbmX3xHQcxg91R6p5BRJbkCfrk6s-swk.png%3Fauto%3Dwebp%26s%3D4cf12e456a9a114988b65861fa776aadfe2029cf&f=1&nofb=1&ipt=2537063e821f77c3ad42b8d6c284213c78f5db5a2ba4cbdef8ad94b1e4a79aff">
+      <img width="27%"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.snel.com%2Fwp-content%2Fuploads%2Fproxmox-logo-color-stacked.png&f=1&nofb=1&ipt=d6d18b7bc23e851a6b1a4763253add81c61496d9aac78d68075139def7326eeb">
+    </div>
+
+    <p>
+      Scegliere il software giusto è uno dei passaggi fondamentali per costruire un homelab efficiente e stabile.
+      Ogni componente della rete — dal router fino al server principale — può essere gestito con sistemi operativi
+      diversi, ognuno con punti di forza e caratteristiche proprie.
+      Vediamo le opzioni più comuni e come si integrano tra loro.
+    </p>
+
+    <h2>Router</h2>
+    <p>
+      Nella parte di rete, la scelta del sistema operativo per il router definisce il livello di controllo e sicurezza
+      che si vuole ottenere.
+      <strong>pfSense</strong> e <strong>OPNsense</strong> sono le soluzioni più diffuse in ambito domestico avanzato:
+      entrambe basate su FreeBSD, offrono un’interfaccia web completa, un firewall potente e funzioni integrate come
+      VPN, monitoraggio e bilanciamento del traffico.
+      pfSense è leggermente più tradizionale, con una base stabile e orientata alla compatibilità, mentre OPNsense punta
+      su un’interfaccia più moderna e aggiornamenti frequenti.
+      Se invece si desidera una soluzione più leggera e flessibile, <strong>OpenWrt</strong> è ideale per chi vuole
+      sfruttare router consumer o piccoli dispositivi embedded: è basato su Linux e permette una personalizzazione
+      profonda tramite pacchetti aggiuntivi, risultando perfetto per chi ama “smanettare”.
+    </p>
+
+    <h2>Sistema operativo del Server Core</h2>
+    <p>
+      Il server “core” è il punto centrale dei servizi sempre attivi, come Home Assistant, il DNS locale o i piccoli
+      automatismi di rete.
+      In questo contesto, la scelta del sistema operativo deve bilanciare stabilità e leggerezza.
+      Se si utilizza un <strong>Raspberry Pi</strong>, la scelta più naturale è <strong>Raspberry Pi OS</strong>
+      (derivato da Debian), che garantisce compatibilità con la maggior parte dei pacchetti e un consumo minimo di
+      risorse.
+      In alternativa, <strong>Debian</strong> puro è un’ottima opzione anche per altre macchine a basso consumo,
+      offrendo un ambiente minimale, affidabile e facilmente gestibile tramite SSH.
+      Chi invece utilizza una <strong>ZimaBoard</strong> può sfruttare l’OS ufficiale fornito dal produttore, pensato
+      per gestire storage e servizi di rete in modo intuitivo. In mancanza di esso, anche qui Debian o Ubuntu Server
+      restano ottime scelte per la loro solidità e semplicità di configurazione.
+    </p>
+
+    <h2>Sistema operativo del Server Home</h2>
+    <p>
+      Il server “Home” è la macchina dedicata allo storage principale: file, backup, media server e snapshot dei dati.
+      Qui entrano in gioco sistemi pensati per la gestione dello storage, come <strong>TrueNAS</strong> o
+      <strong>OpenMediaVault</strong>, entrambi basati su Linux o FreeBSD, con interfacce web chiare e strumenti di
+      gestione intuitivi.
+      TrueNAS, in particolare, è orientato alla massima affidabilità e offre un’integrazione nativa con ZFS, perfetta
+      per ambienti dove si vogliono mantenere copie coerenti e sicure dei dati.
+      In alternativa, anche una semplice distribuzione Linux (come Debian o Ubuntu Server) può funzionare egregiamente,
+      configurando manualmente servizi come Samba o NFS per la condivisione dei file.
+      La scelta dipende molto dal livello di controllo desiderato: chi preferisce semplicità può optare per OMV, chi
+      invece vuole una gestione più granulare può lavorare direttamente via terminale su una distro standard.
+    </p>
+
+    <h2>Vantaggi di ZFS e RAID-Z</h2>
+    <p>
+      Uno degli aspetti più interessanti quando si parla di server domestici è l’utilizzo di file system avanzati come
+      <strong>ZFS</strong>.
+      ZFS unisce file system e gestione del volume in un’unica architettura, offrendo funzioni come snapshot,
+      compressione, deduplicazione e verifica dell’integrità dei dati.
+      È particolarmente utile per chi conserva grandi quantità di file importanti, poiché protegge da errori di
+      corruzione e semplifica il recupero in caso di guasto.
+      Un’altra caratteristica chiave è la possibilità di configurare <strong>RAID-Z</strong>, una forma di ridondanza
+      che permette di mantenere i dati accessibili anche se un disco dovesse guastarsi, riducendo il rischio di perdita.
+      Sia <strong>Proxmox</strong> che <strong>FreeBSD</strong> integrano ZFS nativamente, permettendo di gestire pool,
+      snapshot e repliche direttamente dall’interfaccia o da riga di comando.
+      Questa combinazione di flessibilità e sicurezza è uno dei motivi per cui ZFS è così apprezzato negli ambienti
+      homelab.
+    </p>
+
+    <h2>Conclusione</h2>
+    <p>
+      Ogni componente del tuo homelab può essere ottimizzato in base alle esigenze: pfSense o OPNsense per la rete,
+      Debian o Raspberry Pi OS per i servizi leggeri, TrueNAS o Linux per lo storage, e ZFS per proteggere i tuoi dati.
+      La chiave è costruire un ecosistema coerente, modulare e sostenibile, in cui ogni parte fa bene il proprio lavoro
+      senza sprechi di risorse.
+    </p>
+
+  </div>
+
+
+  <footer class="hcenter">
+    <p style="padding: 10px;">Contatti</p>
+    <a style="text-decoration: none;" href="https://github.com/mf1673">
+      <img width="40px" href="" src="/Images/github.png">
+    </a>
+    <a style="text-decoration: none;" href="https://instagram.com/michele._.fazio">
+      <img width="40px" src="/Images/instagram.png">
+    </a>
+  </footer>
+</body>
+
+</html>

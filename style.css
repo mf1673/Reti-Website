@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+:root{
+  font-family: sans-serif;
+  color-scheme: light dark;
+  --bg: white ;
+  --text: black;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+h1{
+  margin-bottom: 38px;
+}
+
+h2 {
+  padding: 20px 0 10px;
+}
+
+h4 {
+  font-size: 24px;
+  padding: 20px 0 10px;
+}
+
+
+
+
+/* ----------| NAV |--------- */
+nav {
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  padding: 10px;
+  background-color: rgba(124, 124, 124,0.6);
+  backdrop-filter: blur(8px);
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------| FOOTER |---------   */
+footer {
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  background-color: rgba(190,190,190,0.5);
+  backdrop-filter: blur(7px);
+  padding: 30px;
+  
+}
+
+
+.hcenter {
+  text-align: center;
+}
+
+#content {
+  margin: auto;
+  max-width: 800px;
+}
+
+
+
+
+/*--------------------------------| TEMA CHIARO |----------------------------------*/
+
+body {
+  height: 100%;
+  max-width: 100%;
+
+  color: black;
+}
+
+
+/*--------------------------------| TEMA SCURO |----------------------------------*/
+
+
+/*--------------------------------| TEMA CHIARO |----------------------------------*/
+
+body {
+  height: 100%;
+  max-width: 100%;
+  background-color: white;
+  color: black;
+}
+
+
+/*--------------------------------| TEMA SCURO |----------------------------------*/

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hardware</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
+</head>
+
+<body>
+  <nav class="hcenter">
+    <a href="/index.html">Home</a>
+    <a href="/Pages/Hardware.html">Hardware</a>
+    <a href="/Pages/Software.html">Software</a>
+    <a href="/Pages/Servizi.html">Servizi</a>
+  </nav>
+
+
+  <div style="margin: 80px 30px 100px 30px">
+
+    <div class="hcenter" style="padding-bottom: 30px;">
+      <h1>Hardware</h1>
+      <img width=70% height=70% style="border-radius: 10px;"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F2098680.jpg&f=1&nofb=1&ipt=bc38b635c908d88f41a3818108b021beda8ef8f1bafb4622af88916ab68e1ae3">
+    </div>
+    <p>
+      La scelta dell’hardware rappresenta il cuore di ogni homelab: stabilità, consumi e possibilità di espansione
+      dipendono tutti dalle componenti fisiche su cui si poggia il sistema.
+      È importante capire fin dall’inizio quale ruolo dovrà svolgere ogni macchina — router, server core, server di
+      archiviazione o di calcolo — per scegliere con criterio e ottimizzare le risorse disponibili.
+    </p>
+
+    <h2>Router</h2>
+    <p>
+      Il router è la prima linea del tuo homelab, responsabile della sicurezza, della gestione del traffico e della
+      connessione alla rete esterna.
+      Per chi desidera il massimo controllo e prestazioni elevate, la soluzione ideale è un <strong>mini PC
+        dedicato</strong> su cui installare pfSense o OPNsense.
+      Questi piccoli sistemi, spesso equipaggiati con CPU Intel a basso consumo e più porte Ethernet, garantiscono
+      un’eccellente affidabilità e sono perfetti per ambienti domestici avanzati.
+      Io, ad esempio, utilizzo un router della <strong>Protectli</strong>, un marchio conosciuto per l’ottimo supporto a
+      pfSense e le prestazioni silenziose.
+      In alternativa, per chi preferisce una soluzione “plug and play”, un <strong>AVM Fritz!Box</strong> rappresenta
+      un’ottima scelta: è facile da configurare, offre un’interfaccia intuitiva e funzioni integrate come VPN, QoS e
+      rete mesh, ideali per gestire in modo semplice tutta la rete domestica.
+    </p>
+    <h2>Server Core</h2>
+    <p>
+      Il server core è il centro dei servizi essenziali dell’homelab: automazioni, DNS locale, log, monitoraggio e
+      piccoli container che non richiedono molta potenza.
+      Qui la priorità è avere un sistema affidabile, silenzioso e con bassi consumi.
+      Il <strong>Raspberry Pi 4</strong> con 8 GB di RAM è una scelta eccellente: compatto, efficiente e supportato da
+      una comunità enorme.
+      Lo utilizzo personalmente per i servizi sempre attivi, come Home Assistant o Pi-hole, e si comporta in modo
+      impeccabile anche 24/7.
+      In alternativa, chi desidera qualcosa di più performante può optare per una <strong>ZimaBoard</strong>, una scheda
+      potente e versatile pensata proprio per piccoli server domestici, oppure per un <strong>mini PC x86</strong> con
+      architettura Intel o AMD, che offre maggiore flessibilità e possibilità di espansione.
+    </p>
+
+    <h2>Server Home</h2>
+    <p>
+      Il server Home è il tuo archivio principale: un sistema dedicato a gestire grandi quantità di dati, backup, media
+      server e macchine virtuali.
+      Qui è fondamentale scegliere un hardware con ampio spazio di archiviazione e una buona ridondanza dei dischi.
+      Le opzioni sono due: acquistare un <strong>NAS preassemblato</strong> come quelli di Synology o QNAP, già
+      ottimizzati per l’uso domestico e con software di gestione intuitivo, oppure costruire un <strong>server
+        personalizzato</strong> con hardware standard e molti dischi configurati in <strong>RAID-Z</strong>.
+      Quest’ultima soluzione richiede un po’ più di esperienza, ma offre massima libertà e performance superiori,
+      soprattutto se combinata con un file system come ZFS, che aggiunge sicurezza e integrità dei dati.
+    </p>
+
+    <h2>Server AI</h2>
+    <p>
+      Con la diffusione dei modelli di intelligenza artificiale, molti homelabber stanno introducendo anche un
+      <strong>server AI</strong> dedicato al calcolo, all’inferenza e all’addestramento locale dei modelli.
+      In questo caso, la potenza della GPU è fondamentale: serve molta VRAM e un sistema di raffreddamento efficiente.
+      Le opzioni principali sono tre:
+      un <strong>Mac Studio</strong>, un <strong>NVIDIA Jetson (come lo Spark)</strong> o un <strong>PC desktop con GPU
+        RTX di fascia alta</strong>.
+      Tutte e tre le soluzioni sono costose, ma ciascuna ha punti di forza diversi.
+      Il <strong>Mac Studio</strong> rappresenta una scelta estremamente bilanciata: prestazioni elevate, consumi
+      ridotti e silenziosità, perfetto per chi vuole potenza senza compromessi energetici.
+      Un <strong>PC con GPU RTX</strong> è la soluzione più potente in assoluto, ma anche la più dispendiosa e
+      impegnativa in termini di consumo e calore; è consigliabile adottare un raffreddamento a liquido all-in-one per
+      mantenere temperature ottimali.
+      Infine, la <strong>NVIDIA Jetson Spark</strong> è una soluzione compatta pensata per l’inferenza e l’AI locale:
+      offre buone prestazioni in spazi ridotti, con un consumo minimo.
+      Non è potente quanto un Mac Studio o un PC desktop, ma è stata progettata specificamente per analizzare dati e
+      addestrare modelli in locale, risultando perfetta per chi vuole sperimentare con reti neurali e automazioni
+      intelligenti senza eccedere nei costi.
+    </p>
+
+    <h2>Conclusione</h2>
+    <p>
+      Costruire l’hardware del proprio homelab è un processo di equilibrio tra potenza, efficienza e scalabilità.
+      Dalla scelta del router fino al server di calcolo, ogni componente può essere adattato alle proprie esigenze e al
+      proprio budget.
+      Che si tratti di un piccolo Raspberry o di un Mac Studio, l’importante è creare un’infrastruttura solida, coerente
+      e pronta a crescere insieme ai propri progetti.
+    </p>
+
+  </div>
+
+
+  <footer class="hcenter">
+    <p style="padding: 10px;">Contatti</p>
+    <a style="text-decoration: none;" href="https://github.com/mf1673">
+      <img width="40px" href="" src="/Images/github.png">
+    </a>
+    <a style="text-decoration: none;" href="https://instagram.com/michele._.fazio">
+      <img width="40px" src="/Images/instagram.png">
+    </a>
+  </footer>
+</body>
+
+</html>
